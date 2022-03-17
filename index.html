@@ -7,13 +7,25 @@
     <title>Vue.js basics</title>
   </head>
   <body>
-    <div id="app">{{message}} Nice to meet vue</div>
+    <div id="app">
+      <div>{{message}} Nice to meet vue</div>
+      <ul>
+        <li v-for="item in items">{{item}}</li>
+      </ul>
+    </div>
+
     <script src="https://unpkg.com/vue@next"></script>
     <script>
       const App = {
         data() {
           return {
             message: "Hello World!",
+            items: [
+              "thingie",
+              "another thingie",
+              "lots of stuff",
+              "more and more",
+            ],
           };
         },
       };
