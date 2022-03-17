@@ -12,6 +12,26 @@
       <ul>
         <li v-for="item in items">{{item}}</li>
       </ul>
+      <h3>Type here:</h3>
+      <textarea
+        v-model="inputMessage"
+        class="inputMessage"
+        rows="5"
+        maxlength="72"
+      ></textarea>
+      <p class="booktext">{{inputMessage}}</p>
+
+      <span v-for="option in options" :key="option">
+        <input
+          v-model="checkedNames"
+          :id="option.value"
+          :value="option.value"
+          type="checkbox"
+        />
+        <label for="option.value">{{option.value}}</label>
+      </span>
+      <br />
+      <span>Checked names: {{checkedNames }}</span>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
@@ -25,6 +45,14 @@
               "another thingie",
               "lots of stuff",
               "more and more",
+            ],
+            inputMessage: "",
+            checkedNames: [],
+            options: [
+              { value: "Carmit" },
+              { value: "Tal" },
+              { value: "Lior" },
+              { value: "Rachel" },
             ],
           };
         },

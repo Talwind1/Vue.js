@@ -7,7 +7,7 @@
 //elegant
 
 //!directives;
-//v-model: creates a relationshup between the data in the instance / component and a form input (dynamically update values)
+//v-model: allows us to capture forms! create a relationshup between component & form input (dynamically updates)
 //v-show: showing and hiding the element depend on the conditional
 //v-if: conditional that display the information depends on meeting the requirement(could be any element.)(nounting the element each time-- really expansive)
 //<li v-for = "num in 5" : key = "num">
