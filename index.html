@@ -32,6 +32,24 @@
       </span>
       <br />
       <span>Checked names: {{checkedNames }}</span>
+      <div>
+        <h3>What's your favorite kind of burger?</h3>
+        <textarea v-model="burgers"></textarea>
+        <br />
+        <button v-if="burgers" type="submit">Let us know!</button>
+      </div>
+
+      <div id="app">
+        <h3>Do you like burgers?</h3>
+        <input v-model="burgers" value="yes" type="radio" id="yes" />
+        <label for="yes">yes</label>
+        <br />
+        <input v-model="burgers" value="no" type="radio" id="no" />
+        <label for="no">no</label>
+        <br />
+        <p v-if="burgers==='yes'" class="thumbs">👍</p>
+        <p v-else-if="burgers==='no'" class="thumbs">You are a crazy man</p>
+      </div>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
@@ -54,6 +72,7 @@
               { value: "Lior" },
               { value: "Rachel" },
             ],
+            burgers: "",
           };
         },
       };
