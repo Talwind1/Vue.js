@@ -8,19 +8,28 @@
 
 //!directives;
 //v-model: allows us to capture forms! create a relationshup between component & form input (dynamically updates)
-//v-show: showing and hiding the element depend on the conditional
-//v-if: conditional that display the information depends on meeting the requirement(could be any element.)(nounting the element each time-- really expansive)
+
+//v-show: showing & hiding the element depend on the condition (one mounting and displaying conditionally.)
+
+//v-if: conditionaly render one thing or another.
+//v-else + v-if ---- must be siblings
+
 //<li v-for = "num in 5" : key = "num">
 //v-bind:  (or : instead!!!) for reusing classes and styles(!), creating dynamic props,etc..
 //:class="red" - example for v-bind
 
-//v-once
-//v-pre
+//(not very useful)
+//v-once: will not update after it renders
+//v-pre: print out the inner text exactly how it is, including code(!!)
 
-//v-on="click" //@click
+//v-on="click"   --- binding to events.
+//or:
+//@click
 
-//v-html
-//v-text
+//v-html: it render a string as an html.. <a href="google.com"/> will render as a link.
+//v-text: it behaves exactly like those double parenthesis, but used in other special cases. {{burgers}}
+
+//table of directives: https://slides.com/sdrasner/intro-to-vue3-1?token=n3Yja_t9#/43
 
 //modifiers:
 //v-model.trim

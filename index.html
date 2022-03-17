@@ -50,6 +50,20 @@
         <p v-if="burgers==='yes'" class="thumbs">👍</p>
         <p v-else-if="burgers==='no'" class="thumbs">You are a crazy man</p>
       </div>
+
+      <div class="row">
+        <input v-model.number="num1" type="number" /><span>+</span
+        ><input v-model.number="num2" type="number" /><span>=</span>
+        <span>{{num1 + num2}}</span>
+        <div class="app">
+          <select v-model="topping" placeholder="topping">
+            <option>Cheese</option>
+            <option>Onion</option>
+            <option>Guaquamoli</option>
+          </select>
+          <p v-if="topping">My favorite topping on the burger is {{topping}}</p>
+        </div>
+      </div>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
@@ -73,6 +87,9 @@
               { value: "Rachel" },
             ],
             burgers: "",
+            num1: "",
+            num2: "",
+            topping: "",
           };
         },
       };
