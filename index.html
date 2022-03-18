@@ -64,6 +64,16 @@
           <p v-if="topping">My favorite topping on the burger is {{topping}}</p>
         </div>
       </div>
+      <div
+        id="colores"
+        @mousemove="xCoordinate"
+        :style=" {backgroundColor: `hsl(${x}, 80%, 50%)`,height:'100px'}"
+      >
+        <p>
+          <button @click="increament">+</button
+          ><button @click="decreament">-</button>
+        </p>
+      </div>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
@@ -90,7 +100,21 @@
             num1: "",
             num2: "",
             topping: "",
+            counter: 0,
+            x: 10,
           };
+        },
+        methods: {
+          increament() {
+            this.counter++;
+          },
+          decreament() {
+            this.counter--;
+          },
+          xCoordinate(e) {
+            console.log(e);
+            this.x = e.clientX;
+          },
         },
       };
       Vue.createApp(App).mount("#app");

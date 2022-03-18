@@ -32,5 +32,14 @@
 //table of directives: https://slides.com/sdrasner/intro-to-vue3-1?token=n3Yja_t9#/43
 
 //modifiers:
-//v-model.trim
-//v-mpdel.number
+//v-model.trim- removes spaces in begging and end of phrase
+//v-mpdel.number- changes string to number
+//v-model.lazy
+
+//mousemove.stop-- compareable to e.stopPropagation
+//mousemove.prevent -- its like preventDefault
+//submit.prevent-- prevent the refresh aafter submiting
+//
+
+//methods:
+//when refering 'this' in methods,we always refering the data variables.
