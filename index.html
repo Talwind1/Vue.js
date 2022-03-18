@@ -70,10 +70,14 @@
         :style=" {backgroundColor: `hsl(${x}, 80%, 50%)`,height:'100px'}"
       >
         <p>
-          <button @click="increament">+</button
+          <button @click="increament">+</button>
+          <span :style="{padding:'5%'}">{{counter}}</span
           ><button @click="decreament">-</button>
         </p>
       </div>
+      <div v-for="movie in ratingInfo"><h3>{{movie.name}}</h3></div>
+      <button @click="sortHighest">highest to lowest</button>
+      <button @click="sortLowest">oposite</button>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
@@ -102,6 +106,10 @@
             topping: "",
             counter: 0,
             x: 10,
+            ratingInfo: [
+              { name: "star wars", rating: 7 },
+              { name: "wonderwoman", rating: 9 },
+            ],
           };
         },
         methods: {
@@ -114,6 +122,12 @@
           xCoordinate(e) {
             console.log(e);
             this.x = e.clientX;
+          },
+          sortLowest() {
+            this.ratingInfo.sort((a, b) => (a.rating > b.rating ? 1 : -1));
+          },
+          sortHighest() {
+            this.ratingInfo.sort((a, b) => (a.rating > b.rating ? -1 : 1));
           },
         },
       };
